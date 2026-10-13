@@ -42,5 +42,8 @@
   "allowScripts": {
     "core-js-pure@3.50.0": true,
     "core-js@3.50.0": true
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
