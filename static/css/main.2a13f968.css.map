@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.19e902f9.css","mappings":"AAAA,GACE,UACF,CCFA,gBAAgB,WAAW","sources":["index.css","components/header/Header.css"],"sourcesContent":["h1 {\n  color:aqua\n}\n",".main-header h1{color:green}"],"names":[],"sourceRoot":""}

@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/lucid_dreamface/static/css/main.041cdfe1.css",
+    "main.css": "/lucid_dreamface/static/css/main.2a13f968.css",
     "main.js": "/lucid_dreamface/static/js/main.57a51396.js",
     "index.html": "/lucid_dreamface/index.html",
-    "main.041cdfe1.css.map": "/lucid_dreamface/static/css/main.041cdfe1.css.map",
+    "main.2a13f968.css.map": "/lucid_dreamface/static/css/main.2a13f968.css.map",
     "main.57a51396.js.map": "/lucid_dreamface/static/js/main.57a51396.js.map"
   },
   "entrypoints": [
-    "static/css/main.041cdfe1.css",
+    "static/css/main.2a13f968.css",
     "static/js/main.57a51396.js"
   ]
 }
