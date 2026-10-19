@@ -1,3 +1,4 @@
+import "../index.css"
 import "./Header.css";
 /*import logo from"./images/logo/logo192.png"*/
 
