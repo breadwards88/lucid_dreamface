@@ -31,8 +31,17 @@
 }
 /* Responsive Design */
 @media (min-width: 1200px) {
-.header-nav{
-    display:flex;
-    
-}
+    .header-nav{
+        display:flex;
+
+    }
+    #links{
+        display:flex;
+        flex-direction:row;
+        justify-content:space-between;
+        align-items:center;
+    }
+    #linkd{
+        display:none;
+    }
 }
