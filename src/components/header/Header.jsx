@@ -1,10 +1,10 @@
-import "../index.css"
 import "./Header.css";
 /*import logo from"./images/logo/logo192.png"*/
 
 const Header = () => {
     return (
-        <div className="header-nav">
+        <header>
+            <div className="header-nav">
             <div className="header-title">
                 <h3>Lucid Elucidation 💭</h3>
             </div>
@@ -20,6 +20,8 @@ const Header = () => {
                 <i className="fa fa-bars">☰</i>
             </a>
         </div>
+        </header>
+        
     );
 };
 

@@ -1,3 +1,4 @@
+/* Base Settings */
 :root{
   background:#FFFFFF;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -18,6 +19,14 @@ header{
 }
 .hidden{
   display:none;
+}
+
+/* from w3 schools */
+.fa{
+    display:inline-block;font:normal normal normal 14px/1 fontawesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;transform:translate(0, 0);
+}
+.fa-bars{
+    color: var(--white);
 }
 
 /* Responsive Design */
