@@ -38,8 +38,9 @@
     #links{
         display:flex;
         flex-direction:row;
-        justify-content:space-between;
-        align-items:right;
+        justify-content:flex-end;
+        align-items:center;
+        margin-left:auto;
     }
     #linkd{
         display:none;
