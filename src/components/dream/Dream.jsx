@@ -6,7 +6,7 @@ const Dream = (prop) => {
             <h3>{prop.title}</h3>
             <p>{prop.description}</p>
             <h4>{prop.type}</h4>
-            <img>{prop.img_name}</img>
+            <img src ={prop.src} alt="Dream" />
         </section>
     )
 }

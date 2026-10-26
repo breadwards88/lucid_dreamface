@@ -1,38 +1,39 @@
-import './exploration.css';
+import './Exploration.css';
+import { Link } from 'react-router-dom';
 
 const Exploration = () => {
     return (
-        <div id="exploration">
-            <h1>Elucidation Exploration</h1>
-            <h4>choose your path</h4>
+        <div id="section">
+            <h2 className='center'>Elucidation Exploration</h2>
+            <h4 className='center'>choose your path</h4>
             <div className="grid1">
                 <section className="slot1">
-                    <p class="emoji-sun">☀️</p>
-                    <div class="cloud-small two"></div>
+                    <p className="emoji-sun">☀️</p>
+                    <div className="cloud-small two"></div>
                     <h3>Waking Dreams</h3>
                     <p>Daydreams, aspirations, and the soft architechture of hope.</p>
-                    <button class="waking"><a href="waking.html">Enter</a></button>
+                    <button className="waking"><Link to="/waking">Enter</Link></button>
                 </section>
-                <section class="slot2">
-                    <p class="emoji-moon">🌙</p>
-                    <div class="cloud-small two"></div>
+                <section className="slot2">
+                    <p className="emoji-moon">🌙</p>
+                    <div className="cloud-small two"></div>
                     <h3>Slumber & Dreaming</h3>
                     <p>The science and wonder of the nocturnal dream state.</p>
-                    <button class="slumber"><a href="slumberndreams.html">Enter</a></button>
+                    <button className="slumber"><Link to="/slumberndreams">Enter</Link></button>
                 </section>
-                <section class="slot3">
-                    <p class="emoji-star">⭐</p>
-                    <div class="cloud-small two"></div>
+                <section className="slot3">
+                    <p className="emoji-star">⭐</p>
+                    <div className="cloud-small two"></div>
                     <h3>Dreams vs Goals</h3>
                     <p>The time tested link between Success and Aspirations.</p>
-                    <button class="dreams"><a href="dvg.html">Enter</a></button>
+                    <button className="dreams"><Link to="/dreamvgoal">Enter</Link></button>
                 </section>
-                <section class="slot4">
-                    <p class="emoji-void">🌀</p>
-                    <div class="cloud-small two"></div>
+                <section className="slot4">
+                    <p className="emoji-void">🌀</p>
+                    <div className="cloud-small two"></div>
                     <h3>A Lack of Dreams</h3>
                     <p>Not everyone needs a powerful driving force to get by.</p>
-                    <button class="lack"><a href="lack.html">Enter</a></button>
+                    <button className="lack"><Link to="/lackdream">Enter</Link></button>
                 </section>
             </div>
         </div>

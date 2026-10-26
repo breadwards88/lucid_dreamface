@@ -1,13 +1,15 @@
-import Hero from "./Hero.css";
+import'./Hero.css';
 
 const Hero = () => {
     return (
         <div className="heroc">
-            <div className="hero-caption">
+            <div className="hero-caption slot3">
                 <p>A Dreamy Deepdive</p>
             </div>
-            <h1>We are <span1>made of</span1> Dreams</h1>
+            <h1 className='center'>We are <span>made of</span> Dreams</h1>
             <div className="cloud"></div>
         </div>
     );
 }
+
+export default Hero;

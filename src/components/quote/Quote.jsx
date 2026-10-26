@@ -4,8 +4,8 @@ const Quote = () => {
     return (
         <div id="quote">
             <div className="bcloud"></div>
-            <h3>"A man's dreams never die.</h3>
-            <p>-Marshall D. Teech</p>
+            <h3 className='center'>"A man's dreams never die."</h3>
+            <p className="center">-Marshall D. Teech</p>
         </div>
     );
 }
