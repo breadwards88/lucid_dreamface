@@ -20,6 +20,10 @@ header{
 .hidden{
   display:none;
 }
+.page {
+  background:rgba(255,255,255,.6);
+  flex-grow:1;
+}
 
 /* from w3 schools */
 .fa{
@@ -143,30 +147,7 @@ header{
     font-size: 30px;
     padding:0;
     }
-    .emoji-sun{
-        position:absolute;
-        top:-80px;
-        font-size: 100px;
-        padding:0;
-    }
-    .emoji-moon{
-        position:absolute;
-        top:-80px;
-        font-size: 100px;
-        padding:0;
-    }
-    .emoji-star{
-        position:absolute;
-        top:180px;
-        font-size: 100px;
-        padding:0;
-    }
-    .emoji-void{
-        position:absolute;
-        top:180px;
-        font-size: 100px;
-        padding:0;
-    }
+
     /* Buttons */
     .waking{
         position: absolute;
