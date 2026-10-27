@@ -1,0 +1,150 @@
+/* Specific Section */
+#sectionDG{
+    background-image:linear-gradient(to right, var(--pink),var(--blue));
+    padding:5%;
+}
+#section-LD1{
+    background-color:var(--white);
+    padding-bottom:2%;
+}
+#section-LD2{
+    background: var(--pale);
+    align-content: center;
+    text-align: center;
+    margin-bottom:-2%;
+}
+
+/* Specific Slot */
+.slot-LD1{
+    background:var(--white);
+    border: dotted var(--text-color) 4px;
+    border-radius: 50%;
+    box-shadow: 5px 5px black;
+    margin:20px;
+    width: 15%;
+    justify-self: center;
+}
+.slot-LD2{
+    background:var(--ptext-color);
+    border: solid var(--pale) 4px;
+    border-radius: 15%;
+    box-shadow: 5px 5px black;
+    margin:20px;
+}
+
+/* Grid Layout */
+.grid1{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: 24px;
+    max-width: 1000px;
+    margin-inline: auto;
+    padding: 24px 16px;
+    box-sizing: border-box;
+}
+.grid1 button {
+    position: static;
+    display: block;
+    margin: 16px auto;
+}
+.grid2{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: 24px;
+    max-width: 1000px;
+    margin-inline: auto;
+    padding: 24px 30px;
+    box-sizing: border-box;
+}
+.grid1 section,
+.grid2 div {
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+.grid1 section {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+}
+
+.grid2 h3, p {
+    padding-right: 5px;
+    text-align: center;
+}
+
+.grid1 .cloud-small {
+    position: relative;
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+    margin: 28px auto 12px;
+    transform: none;
+}
+
+.grid1 .cloud-small::before,
+.grid1 .cloud-small::after {
+    position: absolute;
+}
+
+.grid1 .cloud-small::after {
+    top: -12px;
+    left: 10px;
+}
+
+.grid1 .cloud-small::before {
+    top: -20px;
+    left: 40px;
+}
+
+/* Emojis */
+.emoji-cloud{
+    font-size: 100px;
+    padding:0;
+}
+.emoji-rocket{
+    font-size: 100px;
+    padding:0;
+}
+.emoji-twinkle{
+    font-size: 100px;
+    padding:0;
+}
+.emoji-crane{
+    font-size: 100px;
+    padding:0;
+}
+
+/* Responsive Design */
+@media (min-width: 1200px) {
+    .grid1{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        max-width: 1000px;
+        margin-inline: auto;
+        padding: 24px 16px;
+        box-sizing: border-box;
+    }
+    .grid2{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        max-width: 1000px;
+        margin-inline: auto;
+        padding: 24px 24px;
+        box-sizing: border-box;
+    }
+    .emoji-cloud{
+        font-size: 90px;
+        padding:0;
+    }
+    .emoji-rocket{
+        font-size: 90px;
+        padding:0;
+    }
+    .emoji-twinkle{
+        font-size: 90px;
+        padding:0;
+    }
+    .emoji-crane{
+        font-size: 90px;
+        padding:0;
+    }
+}

@@ -20,7 +20,7 @@
     padding:2%;
 }
 .heroc-LD {
-    background-color:var(--gray);
+    background-color:var(--pale);
     padding:2%;
 }
 
@@ -30,6 +30,9 @@ span {
 }
 .span-dvg {
     color: red;
+}
+.span-lod {
+    color: gray;
 }
 .hero-caption {
     display:flex;

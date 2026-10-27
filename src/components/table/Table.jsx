@@ -4,10 +4,10 @@ const Table = () => {
     return (
         <div id="section2">
             <div>
-                <h1 className="centralcity">Side by Side</h1>
-                <p className="ptext centralcity">Neither is superior. Together, they are the engine.</p>
+                <h1 className="center">Side by Side</h1>
+                <p className="ptext center">Neither is superior. Together, they are the engine.</p>
             </div>
-            <div className="comparison">
+            <div>
                 <table>
                     <tr>
                         <th>DREAMS</th>

@@ -2,8 +2,8 @@ import './Section.css';
 
 const SectionDG = () => {
     return (
-        <div id="section1">
-                <h1 className="centralcity">Building the Bridge</h1>
+        <div id="sectionDG">
+                <h2 className="center">Building the Bridge</h2>
                 <div className="grid2">
                     <section className="slot1">
                         <h3>Clarify the Dream</h3>

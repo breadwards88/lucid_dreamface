@@ -1,0 +1,32 @@
+/* Table */
+table {
+    border-collapse:collapse;
+    width: 40%;
+    margin-left:auto;
+    margin-right:auto;
+    background: var(--ptext-color);
+}
+table, th, td{
+    border: 4px solid var(--green);
+    
+}
+th , td {
+    padding: 15px;
+    text-align: center;
+    color: var(--white);
+}
+th {
+    font-size: 30px;
+}
+td{
+    font-size: 20px
+}
+td:nth-child(1), th:nth-child(1) {
+    border-left: 4px var(--orange);
+    border-right: 4px solid var(--orange);
+}
+
+td:nth-child(2), th:nth-child(2) {
+    border-left: 4px solid var(--purple);
+    border-right: 4px solid var(--purple);
+}

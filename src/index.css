@@ -8,6 +8,7 @@
   --blue:#D4EEFF;
   --white:#FFFFFF;
   --pink:#F4EBF0;
+  --pale:#F0F0F0;
   --ptext-color:gray;
   --text-color:black;
 }
@@ -31,15 +32,12 @@ header{
   box-shadow: 5px 5px black;
   margin: 20px;
 }
-
 .slot2 {
   background: var(--blue);
   border: solid var(--text-color) 4px;
   border-radius: 15%;
   box-shadow: 5px 5px black;
-  margin: 20px;
 }
-
 .slot3 {
   background: var(--orange);
   border: solid var(--text-color) 4px;
@@ -47,7 +45,6 @@ header{
   box-shadow: 5px 5px var(--text-color);
   margin: 20px;
 }
-
 .slot4 {
   background: var(--pink);
   border: solid var(--text-color) 4px;
@@ -55,13 +52,34 @@ header{
   box-shadow: 5px 5px var(--text-color);
   margin: 20px;
 }
-
 .slot5 {
   background: var(--purple);
   border: solid var(--text-color) 4px;
   border-radius: 15%;
   box-shadow: 5px 5px var(--text-color);
   margin: 20px;
+}
+#section1{
+    background-color:var(--blue);
+}
+#section2{
+    background: var(--white);
+    padding-bottom:5%;
+}
+#section3{
+    background: var(--blue);
+    align-content: center;
+    text-align: center;
+}
+#section4{
+    background: var(--green);
+    align-content: center;
+    justify-items: center;
+    text-align: center;
+}
+#section5{
+    background: var(--orange);
+    padding-bottom: 2%;
 }
 
 /* from w3 schools */
@@ -85,6 +103,14 @@ h1{
 }
 h2{
   font-size: 40px;
+  color:var(--text-color);
+}
+h3{
+  font-size: 30px;
+  color:var(--text-color);
+}
+h4{
+  font-size:18px;
   color:var(--text-color);
 }
 
