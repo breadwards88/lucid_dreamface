@@ -3,7 +3,7 @@ import './Statistics.css';
 const Statistics = () => {
     return (
         <div id="statistics">
-            <div className="grid2">
+            <div className="gridWD">
                 <div className="slot2">
                     <h2>47%</h2>
                     <p>Of waking hours are spend mind-wandering</p>
