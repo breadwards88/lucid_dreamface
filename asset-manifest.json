@@ -1,15 +1,21 @@
 {
   "files": {
-    "main.css": "/lucid_dreamface/static/css/main.69806d05.css",
-    "main.js": "/lucid_dreamface/static/js/main.f410a5dd.js",
+    "main.css": "/lucid_dreamface/static/css/main.59d575a9.css",
+    "main.js": "/lucid_dreamface/static/js/main.2f5ae783.js",
+    "static/media/food.jpg": "/lucid_dreamface/static/media/food.a555b5c223b9b420fb8f.jpg",
+    "static/media/education.jpg": "/lucid_dreamface/static/media/education.b59051dc6914ac2e0bf0.jpg",
+    "static/media/lottery.jpg": "/lucid_dreamface/static/media/lottery.ff22cc90f9e76dd6103e.jpg",
     "static/media/sleeping.png": "/lucid_dreamface/static/media/sleeping.802538e6126f2d37bf11.png",
+    "static/media/travel.jpg": "/lucid_dreamface/static/media/travel.bcb6a5b231f3907ff1ec.jpg",
     "static/media/peace.jpg": "/lucid_dreamface/static/media/peace.56d68b0f4b97af1a1b8b.jpg",
+    "static/media/health.jpg": "/lucid_dreamface/static/media/health.40968622675dad0bd6d3.jpg",
+    "static/media/astronaut.jpg": "/lucid_dreamface/static/media/astronaut.61cf8ea3a3c061c9d3f9.jpg",
     "index.html": "/lucid_dreamface/index.html",
-    "main.69806d05.css.map": "/lucid_dreamface/static/css/main.69806d05.css.map",
-    "main.f410a5dd.js.map": "/lucid_dreamface/static/js/main.f410a5dd.js.map"
+    "main.59d575a9.css.map": "/lucid_dreamface/static/css/main.59d575a9.css.map",
+    "main.2f5ae783.js.map": "/lucid_dreamface/static/js/main.2f5ae783.js.map"
   },
   "entrypoints": [
-    "static/css/main.69806d05.css",
-    "static/js/main.f410a5dd.js"
+    "static/css/main.59d575a9.css",
+    "static/js/main.2f5ae783.js"
   ]
 }
