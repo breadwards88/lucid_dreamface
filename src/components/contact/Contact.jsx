@@ -16,8 +16,6 @@ export default function ContactForm() {
 
         const data = await response.json();
 
-
-        
         setResult(data.success ? "Success!" : "Error");
     };
 
