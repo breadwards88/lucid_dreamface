@@ -8,7 +8,6 @@ const Navigation = () => {
 
     const toggleNav = () => {
         setMenuOpen(!menuOpen);
-        console.log(menuOpen);
     }
     
     return (

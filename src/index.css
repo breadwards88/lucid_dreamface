@@ -37,6 +37,7 @@ header{
   border: solid var(--text-color) 4px;
   border-radius: 15%;
   box-shadow: 5px 5px black;
+  margin: 20px;
 }
 .slot3 {
   background: var(--orange);
