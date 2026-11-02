@@ -1,0 +1,41 @@
+.form-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#section3 form{
+    padding:10px;
+    margin: 20px auto;
+    width: min(24rem, calc(100% - 40px));
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+#section3 form p{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    text-align:center;
+}
+#section3 form input, #section3 form textarea{
+    width: 100%;
+    box-sizing: border-box;
+}
+#section3 form button{
+    align-self: center;
+}
+textarea{
+    min-height:8rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .form-div {
+        width: 90%;
+    }
+}
