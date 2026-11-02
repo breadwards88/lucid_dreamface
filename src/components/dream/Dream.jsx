@@ -3,10 +3,18 @@ import "./Dream.css";
 const Dream = (prop) => {
     return (
         <section className="dream">
-            <h3>{prop.title}</h3>
+            <h4>{prop.title}</h4>
             <p>{prop.description}</p>
-            <h4>{prop.type}</h4>
-            <img src ={prop.src} alt="Dream" />
+            <h5>{prop.type}</h5>
+            {prop.iframeSrc ? (
+                <iframe
+                    src={prop.iframeSrc}
+                    title={`${prop.title} map`}
+                    loading="lazy"
+                />
+            ) : (
+                <img src={prop.src} alt={prop.title} />
+            )}
         </section>
     )
 }
