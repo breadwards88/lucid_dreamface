@@ -8,18 +8,36 @@ import foodpic from './food.jpg';
 import lotterypic from './lottery.jpg';
 import starpic from './star.jpg';
 import travelpic from './travel.jpg';
+import axios from "axios";
+import {useState, useEffect} from "react";
 
 const Dreamlisting = () => {
+    const Dreams = () => {
+        const [dreams, setDreams] = useState([]);
+    }
+
+    //post pageload
+    useEffect(() => {
+        const pullDreams = async()=>{
+            const response = await axios.getUri("https://")
+            setDreams(response.data);
+        };
+
+        pullDreams();
+    },[]);
+
     return (
         <div className="section2">
             <h2 className="center">Dreamboard</h2>
             <h4 className="center">What do you dream of?</h4>
             <section className="slot-DB">
                 <div id="dreamlist" className="gridDB" >
-                    <Dream title="World Peace"
-                        type="Long-term"
-                        src={peacepic}
-                        description="A world where all nations live in harmony and conflicts are resolved peacefully." />
+                    {dreams.map((dream)=>(<Dream title={dream.title}
+                        type={dream.type}
+                        src={dream.src}
+                        description={dream.description} />
+                        ))}
+                    
                     <Dream title="End World Hunger"
                         type="Long-term"
                         src={foodpic}
