@@ -1,10 +1,10 @@
 import "./Dream.css";
 
 const Dream = (prop) => {
+    const imageSrc = 'https://lucid-backend-xqj7.onrender.com/${prop.img_name}';
     return (
         <section className="dream">
             <h4>{prop.title}</h4>
-            <p>{prop.description}</p>
             <h5>{prop.type}</h5>
             {prop.iframeSrc ? (
                 <iframe
@@ -13,8 +13,9 @@ const Dream = (prop) => {
                     loading="lazy"
                 />
             ) : (
-                <img src={prop.src} alt={prop.title} />
+                <img src={imageSrc} alt={prop.title} />
             )}
+            <p>{prop.description}</p>
         </section>
     )
 }
