@@ -23,7 +23,7 @@ const Dreamlisting = () => {
                 <div id="dreamlist" className="gridDB" >
                     {dreams.map((dream) => (<Dream title={dream.title}
                         type={dream.type}
-                        src={dream.src}
+                        img_name={dream.img_name}
                         description={dream.description} />
                     ))}
                 </div>
