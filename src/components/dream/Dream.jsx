@@ -1,4 +1,7 @@
 import "./Dream.css";
+import {API_BASE_URL} from "../../config";
+import DreamDialog from "../dream_dialog/DreamDialog";
+import {useState} from "react";
 
 const Dream = (prop) => {
     const imageName = prop.img_name ?? prop.src;
@@ -6,10 +9,18 @@ const Dream = (prop) => {
     const imageSrc = imageName
         ? imageName.startsWith("http")
             ? imageName
-            : `https://lucid-backend-xqj7.onrender.com${imageName.replace(/^\/public/, "")}`
+            : `{API_BASE_URL}/${imageName.replace(/^\/public/, "")}`
         : null;
+    const [showDialog, setShowDialog] = useState(false);
+    const showDetails = () => {
+        setShowDialog(true);
+    };
+    const hideDetails = (e) => {
+        e.stopPropagation();
+        setShowDialog(false);
+    };
     return (
-        <section className="dream">
+        <section className="dream" onClick={showDetails}>
             <h4>{prop.title}</h4>
             <h5>{prop.type}</h5>
             {prop.iframeSrc || isMap ? (
@@ -22,6 +33,15 @@ const Dream = (prop) => {
                 <img src={imageSrc} alt={prop.title} />
             ) : null}
             <p>{prop.description}</p>
+            {showDialog && <DreamDialog 
+                id={prop.id}
+                size={prop.size}
+                title={prop.title}
+                type={prop.type}
+                description={prop.description}
+                image={imageSrc}
+                onClose={hideDetails}
+            />}
         </section>
     )
 }
