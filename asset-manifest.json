@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/lucid_dreamface/static/css/main.3f578a20.css",
-    "main.js": "/lucid_dreamface/static/js/main.3fd75c02.js",
+    "main.js": "/lucid_dreamface/static/js/main.8459c490.js",
     "static/media/sleeping.png": "/lucid_dreamface/static/media/sleeping.802538e6126f2d37bf11.png",
     "index.html": "/lucid_dreamface/index.html",
     "main.3f578a20.css.map": "/lucid_dreamface/static/css/main.3f578a20.css.map",
-    "main.3fd75c02.js.map": "/lucid_dreamface/static/js/main.3fd75c02.js.map"
+    "main.8459c490.js.map": "/lucid_dreamface/static/js/main.8459c490.js.map"
   },
   "entrypoints": [
     "static/css/main.3f578a20.css",
-    "static/js/main.3fd75c02.js"
+    "static/js/main.8459c490.js"
   ]
 }
