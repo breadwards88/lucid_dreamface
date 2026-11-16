@@ -90,7 +90,7 @@ export default function ContactForm() {
                     <section>
                         <p id="img-prev-section">
                             {prevSrc === "" ? ("") : (
-                                <img id="img-prev" src={prevSrc} />
+                                <img id="img-prev" src={prevSrc} alt="dream image"/>
                             )}
                         </p>
                         <p>
