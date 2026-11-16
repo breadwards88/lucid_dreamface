@@ -37,7 +37,13 @@ export default function ContactForm() {
         }
 
         const response = await fetch(`${API_BASE_URL}/api/dreams`, {method: "POST", body: formData});
-        setResult(response.ok ? "Dream Sent!" : `Error sending Dream (${response.status})`);
+        if (!response.ok) {
+            const errorDetails = await response.text();
+            console.error("Dream submission failed:", response.status, errorDetails);
+            setResult(`Error sending Dream (${response.status})`);
+            return;
+        }
+        setResult("Dream Sent!");
     };
 
     const [selectedDreamType, setSelectedDreamType] = useState(null);
@@ -61,6 +67,7 @@ export default function ContactForm() {
                     <p className="dream-type-select">
                         <label for="title">Select a Dream Type:</label>
                         <Select
+                            inputId="dream-type"
                             value={selectedDreamType}
                             onChange={setSelectedDreamType}
                             options={dreamOptions}
@@ -88,7 +95,7 @@ export default function ContactForm() {
                         </p>
                         <p>
                             <label className="image-label" htmlFor="img_name">Select Image</label>
-                            <input type="file" id="img" name="img_name" accept="images/*" onChange={uploadImage}></input>
+                            <input type="file" id="img_name" name="img_name" accept="image/*" onChange={uploadImage}></input>
                         </p>
                     </section>
                     <button className='formbtn' type="submit">Submit</button>
