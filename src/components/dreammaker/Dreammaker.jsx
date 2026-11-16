@@ -58,7 +58,7 @@ export default function ContactForm() {
                 <form onSubmit={onSubmit} className="slot3">
                     <p className="dream-name">
                         <label for="dream-title">Dream Name: </label>
-                        <input type="text" name="title" required minLength="3" />
+                        <input type="text" name="title" required minLength="4" />
                     </p>
                     <p className="dream-description">
                         <label htmlFor="description">Description of Dream:</label>
