@@ -36,7 +36,7 @@ export default function ContactForm() {
             );
         }
 
-        const response = await fetch(`${API_BASE_URL}/api/dreams`, {method: "POST", body: formData});
+        const response = await fetch(`${API_BASE_URL}/api/dreams`, { method: "POST", body: formData });
         if (!response.ok) {
             const errorDetails = await response.text();
             console.error("Dream submission failed:", response.status, errorDetails);
