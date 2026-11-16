@@ -6,11 +6,11 @@ import './Dreammaker.css';
 import { API_BASE_URL } from '../../config';
 
 const dreamOptions = [
-        { value: 'Short-term', label: 'Short-term' },
-        { value: 'Long-term', label: 'Long-term' },
-        { value: 'Destination', label: 'Destination' },
-        { value: 'Time Sensitive', label: 'Time Sensitive' }
-    ];
+    { value: 'Short-term', label: 'Short-term' },
+    { value: 'Long-term', label: 'Long-term' },
+    { value: 'Destination', label: 'Destination' },
+    { value: 'Time Sensitive', label: 'Time Sensitive' }
+];
 
 export default function ContactForm() {
     const [result, setResult] = useState("");
@@ -19,54 +19,44 @@ export default function ContactForm() {
     const uploadImage = (e) => {
         setPrevSrc(URL.createObjectURL(e.target.files[0]));
     };
-    const addDreamToServer = async(e) => {
-        e.preventDefault();
-        setResult("Submitting...");
-        const formData = new FormData(e.target);
-        if (selectedDreamType?.value === "Time Sensitive") {
-            formData.set(
-                "message",
-                `${formData.get("message")}\nTo be completed by ${endDate.toLocaleDateString("en-US")}`
-            );
-        }
-        console.log("HI");
-
-        const response = await fetch(`${API_BASE_URL}/api/dreams`,{
-            "method": "POST",
-            "body": formData
-        });
-        
-        if(response.status===200){
-            setResult("Dream Sent!");
-        }
-        else {
-            setResult("Error sending Dream");
-        }
-    };
-
     const onSubmit = async (e) => {
         e.preventDefault();
-        const formData = new FormData(e.target);
-        formData.append("access_key", "ff6f6837-d38d-4519-9fd9-72c6b9f903cd");
-        const response = await fetch(`${API_BASE_URL}/api/dreams`, {
-            method: "POST",
-            body: formData
-        });
-        const data = await response.json();
-        setResult(data.success ? "Success!" : "Error");
+        setResult("Submitting...");
+        const formData = new FormData(e.currentTarget);
+        if (!selectedDreamType) {
+            setResult("Please select a dream type.");
+            return;
+        }
+        formData.set("type", selectedDreamType.value);
+        if (selectedDreamType?.value === "Time Sensitive") {
+            const description = formData.get("description");
+            formData.set(
+                "description",
+                `${description}\nTo be completed by ${endDate.toLocaleDateString("en-US")}`
+            );
+        }
+
+        const response = await fetch(`${API_BASE_URL}/api/dreams`, {method: "POST", body: formData});
+        setResult(response.ok ? "Dream Sent!" : `Error sending Dream (${response.status})`);
     };
 
     const [selectedDreamType, setSelectedDreamType] = useState(null);
 
     return (
         <div id="section4">
+            <div>
+            </div>
             <h2 className="center">Dreammaker</h2>
             <p className="desc-dreammake">Fill out this form if you want to add to the dreamboard.</p>
             <div className="form-div">
-                <form onSubmit={addDreamToServer} className="slot3">
+                <form onSubmit={onSubmit} className="slot3">
                     <p className="dream-name">
                         <label for="dream-title">Dream Name: </label>
-                        <input type="text" name="title" required minLength="3"/>
+                        <input type="text" name="title" required minLength="3" />
+                    </p>
+                    <p className="dream-description">
+                        <label htmlFor="description">Description of Dream:</label>
+                        <textarea id="description" name="description" required minLength="10" />
                     </p>
                     <p className="dream-type-select">
                         <label for="title">Select a Dream Type:</label>
@@ -97,8 +87,8 @@ export default function ContactForm() {
                             )}
                         </p>
                         <p>
-                            <label className="image-label" htmlFor="img">Select Image</label>
-                            <input type="file" id="img" name="img" accept="images/*" onChange={uploadImage}></input>
+                            <label className="image-label" htmlFor="img_name">Select Image</label>
+                            <input type="file" id="img" name="img_name" accept="images/*" onChange={uploadImage}></input>
                         </p>
                     </section>
                     <button className='formbtn' type="submit">Submit</button>

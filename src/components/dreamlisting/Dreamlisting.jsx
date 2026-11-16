@@ -7,39 +7,33 @@ import{ API_BASE_URL } from "../../config";
 const Dreamlisting = () => {
     const [dreams, setDreams] = useState([]);
     const [pending, setPending] = useState(true);
-    const [showAddDialog, setShowAddDialog] = useState(false);
-
-    const openAddDialog = () => {
-        setShowAddDialog(true);
-    };
-    
-    const closeAddDialog = () => {
-        setShowAddDialog(false);
-    };
-    const addDreamToListing = (dream) => {
-        setDreams((dreams)=>[...dreams, dream]);
-    };
 
     //post pageload
     useEffect(() => {
-        (async () => {
+        const loadDreams = async () => {
             const response = await axios.get(`${API_BASE_URL}/api/dreams/`);
             setPending(false);
             setDreams(response.data);
-        })();
+        };
+        loadDreams();
     }, []);
 
     return (
         <div id="section2">
             <h2 className="center">Dreamboard</h2>
             <h4 className="center">What do you dream of?</h4>
+
             <section className="slot-DB">
                 <div id="dreamlist" className="gridDB" >
-                    {dreams.map((dream) => (<Dream 
+                    {pending && <p>Loading...</p>}
+                    {dreams.map((dream) => (
+                        <Dream
+                        id={dream._id}
                         title={dream.title}
                         type={dream.type}
                         img_name={dream.img_name}
-                        description={dream.description} />
+                        description={dream.description}
+                        />
                     ))}
                 </div>
             </section>

@@ -11,6 +11,7 @@ const Dream = (prop) => {
             ? imageName
             : `${API_BASE_URL}/${imageName.replace(/^\/?public\/?/, "").replace(/^\/+/, "")}`
         : null;
+    const iframeSrc = prop.iframeSrc || (isMap ? imageName : null);
     const [showDialog, setShowDialog] = useState(false);
     const showDetails = () => {
         setShowDialog(true);
@@ -23,9 +24,9 @@ const Dream = (prop) => {
         <section className="dream" onClick={showDetails}>
             <h4>{prop.title}</h4>
             <h5>{prop.type}</h5>
-            {prop.iframeSrc || isMap ? (
+            {iframeSrc ? (
                 <iframe
-                    src={prop.iframeSrc || imageName}
+                    src={iframeSrc}
                     title={`${prop.title} map`}
                     loading="lazy"
                 />
@@ -38,7 +39,8 @@ const Dream = (prop) => {
                 title={prop.title}
                 type={prop.type}
                 description={prop.description}
-                image={imageSrc}
+                img_name={imageSrc}
+                iframeSrc={iframeSrc}
                 onClose={hideDetails}
             />}
         </section>

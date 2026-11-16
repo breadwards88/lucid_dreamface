@@ -14,7 +14,6 @@ const DetailsDialog = (prop) => {
             <p>{prop.type} Type</p>
             <p>Size: {prop.description} Description</p>
         </>
-
     );
 };
 

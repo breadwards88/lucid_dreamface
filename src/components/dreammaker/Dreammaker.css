@@ -8,6 +8,11 @@
     margin: 0;
     padding: 0;
 }
+.dream-description {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
 .formbtn, #section4 input[type="file"]::file-selector-button {
     display: inline-block;
     padding: 6px 12px;
