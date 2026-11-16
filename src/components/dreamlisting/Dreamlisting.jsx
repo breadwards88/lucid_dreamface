@@ -16,12 +16,15 @@ const Dreamlisting = () => {
     const closeAddDialog = () => {
         setShowAddDialog(false);
     };
+    const addDreamToListing = (dream) => {
+        setDreams((dreams)=>[...dreams, dream]);
+    };
 
     //post pageload
     useEffect(() => {
         (async () => {
-            const response = await axios.get('{API_BASE_URL}/api/dreams/');
-
+            const response = await axios.get(`${API_BASE_URL}/api/dreams/`);
+            setPending(false);
             setDreams(response.data);
         })();
     }, []);

@@ -1,6 +1,6 @@
 import "./Dream.css";
 import {API_BASE_URL} from "../../config";
-import DreamDialog from "../dream_dialog/DreamDialog";
+import DreamDialog from "./dialog/DreamDialog";
 import {useState} from "react";
 
 const Dream = (prop) => {
@@ -9,7 +9,7 @@ const Dream = (prop) => {
     const imageSrc = imageName
         ? imageName.startsWith("http")
             ? imageName
-            : `{API_BASE_URL}/${imageName.replace(/^\/public/, "")}`
+            : `${API_BASE_URL}/${imageName.replace(/^\/?public\/?/, "").replace(/^\/+/, "")}`
         : null;
     const [showDialog, setShowDialog] = useState(false);
     const showDetails = () => {

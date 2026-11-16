@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import { Select } from 'react-select';
+import Select from 'react-select';
 import './Dreammaker.css';
 import { API_BASE_URL } from '../../config';
 
@@ -44,11 +44,11 @@ export default function ContactForm() {
         }
     };
 
-    const onSubmit = async (event) => {
-        event.preventDefault();
-        const formData = new FormData(event.target);
+    const onSubmit = async (e) => {
+        e.preventDefault();
+        const formData = new FormData(e.target);
         formData.append("access_key", "ff6f6837-d38d-4519-9fd9-72c6b9f903cd");
-        const response = await fetch("https://api.web3forms.com/submit", {
+        const response = await fetch(`${API_BASE_URL}/api/dreams`, {
             method: "POST",
             body: formData
         });
@@ -59,17 +59,16 @@ export default function ContactForm() {
     const [selectedDreamType, setSelectedDreamType] = useState(null);
 
     return (
-        <div id="section4" className="hidden">
+        <div id="section4">
             <h2 className="center">Dreammaker</h2>
-            <p className="center">Fill out this form if you want to add to the dreamboard.</p>
-            <div>
-                <form onSubmit={addDreamToServer}>
-                    <p>
-                        <label for="title">Dream Name: </label>
+            <p className="desc-dreammake">Fill out this form if you want to add to the dreamboard.</p>
+            <div className="form-div">
+                <form onSubmit={addDreamToServer} className="slot3">
+                    <p className="dream-name">
+                        <label for="dream-title">Dream Name: </label>
                         <input type="text" name="title" required minLength="3"/>
                     </p>
-                    
-                    <p>
+                    <p className="dream-type-select">
                         <label for="title">Select a Dream Type:</label>
                         <Select
                             value={selectedDreamType}
@@ -78,14 +77,18 @@ export default function ContactForm() {
                             isSearchable={true}
                         />
 
-                    {selectedDreamType?.value === "Time Sensitive" && (
-                        <DatePicker
-                            selected={endDate}
-                            onChange={(date) => setEndDate(date)}
-                            dateFormat="MM/dd/yyyy"
-                            name="endDate"
-                        />
-                    )}
+                        {selectedDreamType?.value === "Time Sensitive" && (
+                            <div>
+                                <label htmlFor="end-date">Select an End Date:</label>
+                                <DatePicker className="date-picker"
+                                    selected={endDate}
+                                    onChange={(date) => setEndDate(date)}
+                                    dateFormat="MM/dd/yyyy"
+                                    name="endDate"
+                                />
+                            </div>
+
+                        )}
                     </p>
                     <section>
                         <p id="img-prev-section">
@@ -94,11 +97,11 @@ export default function ContactForm() {
                             )}
                         </p>
                         <p>
-                            <label htmlFor="img">Select Image</label>
+                            <label className="image-label" htmlFor="img">Select Image</label>
                             <input type="file" id="img" name="img" accept="images/*" onChange={uploadImage}></input>
                         </p>
                     </section>
-                    <button type="submit">Submit</button>
+                    <button className='formbtn' type="submit">Submit</button>
                     <p id="status-message">{result}</p>
                 </form>
             </div>

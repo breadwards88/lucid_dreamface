@@ -1,0 +1,54 @@
+.form-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.desc-dreammake{
+    text-align:center;
+    margin: 0;
+    padding: 0;
+}
+.formbtn, #section4 input[type="file"]::file-selector-button {
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    background-color: var(--text-color);
+    color: var(--white);
+    border-radius: 20%;
+    border: none;
+}
+.dream-name {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin: 0;
+    padding: 0;
+}
+.dream-type-select {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    align-items: center;
+}
+.date-picker {
+    margin-left: 10px;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+.image-label {
+    margin-bottom: 200px;
+}
+input {
+    width: 90%;
+    align-self: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .form-div {
+        width: 90%;
+    }
+}

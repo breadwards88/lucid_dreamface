@@ -1,4 +1,4 @@
-import "DreamDialog.css";
+import "./DreamDialog.css";
 import { useState } from "react";
 
 const DreamDialog = (prop) => {
@@ -13,11 +13,14 @@ const DreamDialog = (prop) => {
                 </span>
             </div>
             <div id = "dream-dialog-content">
-                <h2>{prop.title}</h2>
-                <h3>{prop.type}</h3>
-                <p>{prop.description}</p>
-                <img src={prop.image} alt={prop.title} />
-                <p>{prop.yes}</p>
+                {showDetails === "details" && (
+                    <>
+                        <h2>{prop.title}</h2>
+                        <h3>{prop.type}</h3>
+                        <p>{prop.description}</p>
+                        <img src={prop.image} alt={prop.title} />
+                    </>
+                )}
             </div>
         </div>
     </div>);

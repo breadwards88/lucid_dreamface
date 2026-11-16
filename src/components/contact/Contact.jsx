@@ -22,6 +22,7 @@ export default function ContactForm() {
     return (
         <div id="section3">
             <h2 className="center">Contact Me</h2>
+            <p className="desc-contact"> Fill out this form if you wish to send me a message!</p>
             <div className="form-div">
                 <form onSubmit={onSubmit} className="slot4">
                     <p>
@@ -34,7 +35,7 @@ export default function ContactForm() {
                     </p>
                     <label for="contact-message">Message</label>
                     <textarea name="message" placeholder="Your message.." required></textarea>
-                    <button class="contact-button" type="submit">Submit</button>
+                    <button className="contact-button" type="submit">Submit</button>
                     <p id="result" className="hidden">{result}</p>
                 </form>
             </div>

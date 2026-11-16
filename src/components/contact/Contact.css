@@ -32,6 +32,20 @@
 textarea{
     min-height:8rem;
 }
+.contact-button{
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    background-color: var(--text-color);
+    color: var(--white);
+    border-radius: 20%;
+    border: none;
+}
+.desc-contact{
+    text-align:center;
+    margin: 0;
+    padding: 0;
+}
 
 /* Responsive Design */
 @media (max-width: 1200px) {
