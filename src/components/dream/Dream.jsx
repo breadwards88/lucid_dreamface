@@ -35,7 +35,6 @@ const Dream = (prop) => {
             <p>{prop.description}</p>
             {showDialog && <DreamDialog 
                 id={prop.id}
-                size={prop.size}
                 title={prop.title}
                 type={prop.type}
                 description={prop.description}
